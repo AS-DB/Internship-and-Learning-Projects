@@ -1,0 +1,375 @@
+day 1:-
+-->basic installation python and vs code with python extension
+
+-->what is data science?(explanations)
+
+DAta science is study of data in which we find meaningful data in it.
+
+-->variable in python?
+
+variable are container in which we store data
+
+--Identifier rules
+
+few examples
+
+-->Data types
+
+numeric data type-> (integer,float) int , float
+text->(string) str
+sequence-> list,tuples,range
+mapping->dictionary
+set->set,frozenset
+boolean data type-> boolean value (true false)
+
+day 2:-
+-->What is list
+1.list dedclaration.
+2.list value accesing using its index number.
+3.Lenght of list
+4.accesing data using for loop
+5.accesing data using range :
+6.conditional statement
+7.changing items value
+
+-->what is tuples
+1.tuple dedclaration
+2.tuple value accesing using colon range
+3.tuple data change uusing type casting
+4.deleting tuple data as well as tuple variable
+
+-->what is set
+1.set dedclaration
+2.data accesing
+3.adding data
+4.remove data
+5.discard data
+
+day 3:-
+-->what is dictionary
+1.dictionary declaration
+2.update value in dictionary
+3.Lenght of dictionary
+4.Multivalued dictionary
+5.using get function get value from dictionary
+6.printing keys
+7.printing values
+8.clearing data
+9. deleting data or dictionary
+10.alternate way to use dictname, dictname[i] indeed of .keys(), .values()
+
+-->loops
+1.for loop
+2.while loop
+3.break
+4.continue
+5.range
+
+day 4:-
+-->What is file
+
+-->what is directory
+
+-->file handling
+1.opening of file
+2.file open modes
+3.reading file:- using read(),read(int),readline(),readlines()
+4.writing file:- using write(),writeline(),writelines()
+5.deleting file using os module-> os.remove("filenaem.extension")
+6.existance of file using os module->os.path.exists("filename.extension")
+
+self done at the end
+7.tell()
+8.seek()
+
+day 5:-
+-->Numpy module in python
+-->what is numpy and defination
+-->installation of numpy
+-->numpy module function
+    1.declaration of ndarray
+    2.Checking the dimension of ndarray->arrayname.ndim
+    3.converting one array dimesion to other dimension-> arrayname(declaration,ndmin=int)  
+    4.accesing element of ndarray-->1d,2d,3d
+    5.Slicing of ndarray
+    6.get the shape of array. -->ndarray_name.shape
+    7.reshape the array-> ndarray_name.reshape(list_number,element)
+                          ndarray_name.reshape(slice,list_number,element)
+    8.Iterating in array using for loop
+    9.Concatation of number of arrays in one-> numpy.Concatation((arrayname,arrayname,..))                       
+
+day 6:-
+-->Pandas module in python
+
+    A. 1d set:-
+
+    1. Pandas Series -> variablename=panda.Series(list,index=list_of_row_name)
+    2. Access data -> variablename[int] 
+
+    B. 2d set:-
+
+    1. Declaring 2d set
+        variable={key:value}
+
+    2. Access all data from 2d set
+        variable1= pandas.DataFlow(variable)
+        print(variable1)
+
+    3. To access particular value
+
+        variable2= pandas.DataFlow(variable.loc[int])
+        print(variable1)
+
+    C. Reading csv file
+
+    1. Reading csv file:
+        variablename= read_csv("filepath")
+    
+    2. To read whole data
+        print(variablename)
+
+    3. To read specific data from top by default it returns 5 data from top
+        variablename.head()
+    
+    4. To read specific data from bottom by default it returns 5 data from bottom
+        variablename.tail()
+    
+    5. To read specific number of data from top 
+        variablename.head(int)
+    
+    6. To read specific number of data from bottom 
+        variablename.tail(int)
+    
+    D. Reading json file
+
+    1. Reading a json file:
+        variablename=read_json("filepath")
+
+    Its have same function as csv file
+
+    E. In order to read entire other data file we can follow the following data
+
+        variablename=read_filetype("filepath")
+
+    F. DATA CLEANING
+
+    1.Read the file -> variablename=read_filetype("filepath")
+    2.Removing null value -> variablename.dropna()
+    3.Removing duplicate value temporary -> variablename.drop_duplicates()
+    4.Removing duplicate value temporary -> variablename.drop_duplicates()
+    5.Removing duplicate value paramently -> variablename.drop_duplicates(inplace=True)
+    6.Filling null value temporary -> variablename.fillna(value)
+    7.Filling null value paramently -> variablename.fillna(value,inplace=True)
+    8.Checking the duplicate value of same kind -> variablename.duplicated()
+
+day 7:-
+-->Matplotlib module
+
+    importing matplotlib.pyplot 
+
+    1.Plotting normal graph
+
+        ->setting coordinates for x and y axis using numpy array
+            variable= numpy.array([int,int,...])
+        
+        ->plotting graph 
+            matplotlib.pyplot.plot(variable)
+
+        ->display the plotted points
+            matplotlib.pyplot.show()
+    
+    2.Marker in graphs:-
+
+        ->changing graph marker
+        matplotlib.pyplot.plot(variable,marker="marker shape") e.g.matplotlib.pyplot.plot(variable,marker="*") 
+
+        ->changing line desing and its color without marker include
+        matplotlib.pyplot.plot(variable,"line_design->color",marker="desing") e.g. matplotlib.pyplot.plot(variable,"-r",marker="*")
+
+        ->changing line desing and its color with marker include
+        matplotlib.pyplot.plot(variable,"marker->line_design->color") e.g. matplotlib.pyplot.plot(variable,"*-r")
+
+        ->changing the size of marker
+        matplotlib.pyplot.plot(variable,markersize=font-size) e.g. matplotlib.pyplot.plot(variable,markersize=20)
+
+                                or
+        matplotlib.pyplot.plot(variable,ms=font-size) e.g. matplotlib.pyplot.plot(variable,21)
+
+        ->changing the color of marker
+            A.Marker edge color
+            
+            matplotlib.pyplot.plot(variable,mec="color") e.g. matplotlib.pyplot.plot(variable,mec="red")
+
+            B.Marker face color
+
+            matplotlib.pyplot.plot(variable,mfc="color") e.g. matplotlib.pyplot.plot(variable,mfc="red")
+
+        ->changing the line desing
+
+            matplotlib.pyplot.plot(variable,linestyle="stylename") e.g. matplotlib.pyplot.plot(variable,linestyle="dotted")
+        
+        ->changing the width of line desing
+
+            matplotlib.pyplot.plot(variable,linewidth=width-size) e.g. matplotlib.pyplot.plot(variable,linewidth=21)
+        
+        3.Marking multiple plot in single graph
+
+            Variablenameo1=numpy.array([int,int,...])
+            
+            Variablenameo2=numpy.array([int,int,...])
+            
+            Variablenameo3=numpy.array([int,int,...])
+
+            matplotlib.pyplot.plot(Variablenameo1,Variablenameo2,Variablenameo3)
+
+        4.Giving lables to x-axis and y-axis
+
+            A.x-axis label:-
+                matplotlib.pyplot.xlabel("name")
+            B.A.y-axis label:-
+                matplotlib.pyplot.ylabel("name")
+        
+        5.Giving title to graph and set its position
+            matplotlib.pyplot.title("name")
+
+            matplotlib.pyplot.title("name",loc="direction")
+        
+        6.Giving grids in x-y axis:
+
+            matplotlib.pyplot.grid(axis='x')
+                        or
+            matplotlib.pyplot.grid(axis='x')
+                        or
+            matplotlib.pyplot.grid(axis='x',axis='y')
+
+          then use:-
+            matplotlib.pyplot.show()
+
+        7.Changing the color and linesize in grid:-
+            matplotlib.pyplot.grid(axis='x',axis='y',color="color",width=width-size)
+
+        8.Plotting multiple graphs in single graph set:-
+
+            matplotlib.pyplot.subplot(int,int,int) #row,column,plotnumber
+            matplotlib.pyplot.plot(variable_cordinates)
+            
+            
+            matplotlib.pyplot.subplot(int,int,int) #row,column,plotnumber
+            matplotlib.pyplot.plot(variable_cordinates)
+
+            matplotlib.pyplot.show()
+        
+        9.Scattered graph:-
+            ->TO display the graph we use
+
+                variable1=numpy.array([int,int,...])
+                variable2=numpy.array([int,int,...])
+
+                matplotlib.pyplot.scatter(variable1,variable2)
+
+        10.Changing the color of marker in scattered graph
+
+                variable1=numpy.array([int,int,...])
+                variable2=numpy.array([int,int,...])
+
+                matplotlib.pyplot.scatter(variable1,variable2,color="color")
+
+        11.Bar graph with its color:-
+
+                variable1=numpy.array([int,int,...])
+                variable2=numpy.array([int,int,...])
+
+                matplotlib.pyplot.bar(variable1,variable2,color="color")
+        
+        12.Horizontal-bar graph and width:-
+                variable1=numpy.array([int,int,...])
+                variable2=numpy.array([int,int,...])
+
+                matplotlib.pyplot.barh(variable1,variable2,color="color")
+        
+        13.Change the background color of graph
+
+            matplotlib.pyplot.figure(facecolor="color") e.g. 
+            matplotlib.pyplot.figure(facecolor="red")
+
+        14.Change the name of particular of graph
+
+            barname_variable= [name of list]
+            plot_points_variable= [list of integer plot]
+
+            matplotlib.pyplot.bar(barname_variable,plot_points_variable)
+
+        15.Change the bar color of particular  
+
+            barname_variable= [name of list]
+            plot_points_variable= [list of integer plot]
+            color=["colorname","colorname","colorname",...]
+            
+            matplotlib.pyplot.bar(barname_variable,plot_points_variable,color)
+
+day 8:-
+Statistic:-
+
+    using Statistic module
+    1.Average values:-
+        A.mean 
+        B.midean
+        c.mode
+    
+    using numpy module
+
+    2.Stanadard deviation:-
+        e.g.
+        variablename=numpy.std(list)
+    
+    3. Machine Learning
+        ->Types of Learning
+            1.Supervised Learning
+            2.Unsupervised Learning
+            3.Supervised Learning algorithm
+            4.Unsupervised Learning algorithm
+            5.Regression and its types
+
+need to learn from myside:-
+
+programming side:-
+1.range
+2.quartile
+3.percentiles
+
+maths side:-
+1.Linear regression or multiple regression
+2.mean
+3.mode
+4.median
+5.standard deviation
+
+
+day 9:-
+1.Linear regression
+    ->What is linear regression
+    ->installation of sklear.linear_module using the command
+        pip install scikitlearn
+    ->practice of question
+2.Logistic regression
+    ->What is Logistic regression
+    ->practice of question
+
+day 10:-
+1.SVM modules used:-
+    numpy
+    sklearn import datasets
+    sklearn.model_selection import train_test_split
+    sklearn.preprocessing import StandardScaler
+    sklearn.svm import SVC
+    sklearn.metrics import accuracy_score
+    matplotlib.pyplot 
+
+2.All libraries with it for classification,operational and Visualization
+3.Handle the missing the missing value with medium or mean using the module sklearn.impute import SimpleImputer and pandas module
+4.Normalization using the module sklear.preprocessiong import StandardScaler.
+
+day 11:-
+1. Decision Tree 
+2. Random Forest Decison Tree
+3. Logistic Regression
